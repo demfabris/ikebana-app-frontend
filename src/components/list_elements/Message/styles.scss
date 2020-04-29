@@ -1,0 +1,89 @@
+/* Message Element */
+
+.msg-element {
+    display: flex;
+    height: 13em;
+    width: 12em;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 1em;
+
+    &:hover {
+        background: rgba(0,0,0,0.05);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1em;
+        justify-content: space-around;
+        cursor: pointer;
+
+        &--el {
+            color: #969696;
+            list-style-type: none;
+            font-weight: 400;
+            font-size: 0.875em;
+
+            .msg-preview {
+                text-overflow: ellipsis;
+                height: 12em;
+                font-size: 0.6em;
+                width: 17em;
+                white-space: pre;
+                overflow: hidden;
+            }
+
+            .msg-sender {
+                color: #2c2c2c;
+                font-weight: 500;
+            }
+
+            .msg-date {
+                font-size: 0.825em;
+            }
+        }
+
+        .material-icons {
+            font-size: 1.25em;
+            color: #2c2c2c;
+        }
+    }
+}
+
+
+.msg-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+@media (max-width: 850px) {
+    .msg-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .msg-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .msg-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .msg-element {
+        width: 90%;
+
+        .material-icons {
+            font-size: 2em;
+        }
+    }
+}

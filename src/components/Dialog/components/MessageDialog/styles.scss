@@ -1,0 +1,80 @@
+/* Message Dialog */
+
+.message-dialog-landscape {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        height: 5em;
+        border-bottom: 1px solid #dbdbdb;
+        width: 100%;
+
+        &--text {
+            width: 100%;
+            font-size: 1.25em;
+            margin-left: 1em;
+            font-weight: 300;
+        }
+
+        .material-icons {
+            margin-right: 1em;
+            font-size: 2em;
+            color: #2c2c2c;
+            cursor: default;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        padding: 1em;
+
+        &--sender {
+            font-size: 1.25em;
+            color: #2c2c2c;
+        }
+
+        &--text {
+            margin-top: 1em;
+            color: #2c2c2c;
+            white-space: pre-wrap;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 5em;
+        border-top: 1px solid #dbdbdb;
+
+        .msg-btn {
+            margin-right: 1em;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .message-dialog-landscape__content {
+        height: 30em;
+    }
+}
+
+
+@supports (-webkit-overflow-scrolling: touch) {
+    .message-dialog-landscape {
+        &__header {
+            min-height: 5em;
+        }
+
+        &__footer {
+            min-height: 5em;
+        }
+    }
+}

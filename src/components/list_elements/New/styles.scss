@@ -1,0 +1,87 @@
+.new-main {
+    display: flex;
+    width: 23em;
+    height: 15em;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+
+        .material-icons {
+            font-size: 4em;
+            color: #65676b;
+            cursor: default;
+        }
+
+        .new-title {
+            font-weight: 300;
+        }
+
+        .new-btn {
+            background: rgba(0,0,0,0.1);
+            border: none;
+            border-radius: 6px;
+            width: 8.5em;
+            height: 2.8em;
+            font-weight: 500;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: 0.1s;
+
+
+            &:hover {
+                background: rgba(94, 44, 145, 0.1);
+
+                a {
+                    color: #5e2c91;
+                }
+            }
+
+            &:active {
+                background: rgba(94, 44, 145, 0.9);
+                color: #fff;
+                a {
+                    color: #fff;
+                }
+            }
+
+            a {
+                font-size: 1.15em;
+                text-decoration: none;
+                color: #2c2c2c;
+            }
+        }
+
+        .new-desc {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.85em;
+            color: rgba(0,0,0,0.5);
+        }
+    }
+}
+
+.new-wrapper {
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+}
+
+@media (max-width: 1170px) {
+    .new-wrapper {
+        flex-direction: column;
+    }
+    .new-main {
+        margin-bottom: 2em;
+    }
+}
+
+@media (max-width: 800px) {
+    .new-main {
+        width: 100%;
+    }
+}

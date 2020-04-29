@@ -1,0 +1,119 @@
+/* Account */
+
+.account {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 0.25em;
+
+    &-main {
+        background: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        border-radius: 6px;
+        min-height: 47em;
+        width: 850px;
+        padding-bottom: 1em;
+        position: relative;
+
+        &__sidebar {
+            position: absolute;
+            height: 100%;
+            width: 15em;
+            border-right: 1px solid #dbdbdb;
+
+            &--list {
+                display: flex;
+                flex-direction: column;
+
+                .tab-element {
+                    display: flex;
+                    align-items: center;
+                    list-style-type: none;
+                    height: 3.5em;
+                    width: 100%;
+                    cursor: pointer;
+
+                    &:hover {
+                        margin-left: -2px;
+                        background: rgba(200, 200, 200, 0.07);
+                        border-left: 2px solid rgba(200,200,200,1);
+                    }
+
+                    &:active {
+                        opacity: 50%;
+                    }
+
+                    &__btn {
+                        cursor: pointer;
+                        margin-left: 2em;
+                        background: none;
+                        border: none;
+                        font-size: 1em;
+                        color: #2c2c2c;
+                    }
+                }
+            }
+        }
+        &__container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15em;
+            padding: 2em;
+        }
+    }
+}
+
+.el-active {
+    border-left: 2px solid #5e2c91 !important;
+
+    &:hover {
+        margin-left: 0px !important;
+        background: #fff !important;
+    }
+}
+
+
+.txt-active {
+    font-weight: 500;
+}
+
+@media (max-width: 1027px) {
+    .account-main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .account {
+        margin-top: -1.75em;
+        padding: 2px;
+    }
+    .account-main {
+        height: 100%;
+    }
+    .account-main__sidebar {
+        display: none;
+    }
+    .account-main__container {
+        font-size: 90%;
+        margin-left: 0;
+        padding: 0.5em;
+        padding-top: 2em;
+    }
+
+    .account-input, .picture-wrapper {
+        width: 100% !important;
+    }
+
+    .acc-field {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__title {
+            text-align: left !important;
+            margin-right: 0 !important;
+            margin-left: 0;
+            margin-bottom: 0.75em;
+        }
+    }
+}

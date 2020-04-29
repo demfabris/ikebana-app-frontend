@@ -1,0 +1,128 @@
+/* Motivation */
+
+.motivation {
+    width: 100%;
+    height: 100%;
+
+    a {
+        color: rgba(255,0,255,1) !important;
+    }
+
+    &__hero {
+        width: 100%;
+        background-image: url("https://ikebana-app-content.s3-sa-east-1.amazonaws.com/static/motivation-background2.jpg");
+        height: 600px; 
+        background-attachment: fixed;
+        background-position: 50% 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__header {
+        height: 8em;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--text {
+            font-family: "Marcellus";
+            width: 60%;
+            color: #fff;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        width: 60%;
+
+        &--img {
+            margin: 3em;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 1px 5px rgba(255,255,255,0.3);
+        }
+
+        .underlay {
+            position: fixed;
+            bottom: 0;
+            top: 25%;
+            right: 0;
+            left: 0;
+            z-index: -1;
+            filter: grayscale(100%) blur(5px) brightness(125%);
+            transform: scale(1.5);
+            opacity: 15%;
+        }
+
+        &--text {
+            font-family: "Marcellus";
+            color: #fff;
+            font-size: 1.5em;
+            white-space: pre-wrap;
+        }
+
+        &--footer {
+            color: #969696;
+        }
+
+        &--btn {
+            width: 10em;
+            height: 2.7em;
+            border: none;
+            margin-left: 0;
+            margin-top: 3em;
+            background: #5e2c91;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 6px;
+
+            &:hover {
+                background: rgba(94, 44, 145, 0.8);
+            }
+
+            &:active {
+                background: rgba(94, 44, 145, 0.6);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .motivation__header {
+        height: 10em;
+        &--text {
+            width: 100%;
+        }
+    }
+
+    .motivation__content {
+        width: 100%;
+
+        &--text {
+            font-size: 1.2em;
+        }
+        
+        &--img {
+            border-radius: 0;
+            object-fit: cover;
+            box-shadow: none;
+        }
+
+        .underlay {
+            width: 100%;
+        }
+    }
+
+    .motivation__hero {
+        background-attachment: scroll;
+    }
+}

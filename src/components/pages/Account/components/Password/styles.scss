@@ -1,0 +1,86 @@
+
+.password {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    &__header {
+        &--title {
+            font-weight: 500;
+            color: #969696;
+            font-size: 1.1em;
+        }
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        width: 100%;
+        margin-top: 2em;
+
+        &--desc {
+            font-weight: 500;
+            color: #969696;
+            font-size: 0.875em;
+            margin-bottom: 2em;
+        }
+    
+        &--container {
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 90%;
+
+            label {
+                position: relative;
+                text-align: right;
+                width: 8em;
+                font-size: 1.1em;
+                font-weight: 500;
+                color: #2c2c2c;
+                margin-right: 1em;
+            }
+
+            .account-input {
+                margin-left: 0;
+                height: 2.3em;
+                border: 1px solid #dbdbdb;
+                border-radius: 3px;
+                width: 65%;
+                padding: 0.25em;
+                font-size: 0.875em;
+
+                &::placeholder {
+                    color: #969696;
+                }
+
+                &:focus {
+                    box-shadow: 0px 0px 2px 1px #5e2c91;
+                }
+            }
+        }
+    }
+}
+
+.validation-overlay-acc {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 2px;
+    left: -1.5em;
+    bottom: 0;
+
+    .material-icons {
+        color: red;
+    }
+}
+
+@media (max-width: 750px) {
+    .validation-overlay-acc {
+        left: auto;
+        right: -1.5em;
+    }
+}

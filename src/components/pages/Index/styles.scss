@@ -1,0 +1,306 @@
+/* Index Page */
+@import url('https://fonts.googleapis.com/css?family=Marcellus&display=swap');
+
+.index {
+    background-image: linear-gradient(-45deg, rgba(94, 44, 145, 0.5) 0%,
+    rgba(229, 178, 202, 0.3) 100%);
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &-main {
+        position: relative;
+        flex-grow: 1;
+        width: 80%;
+
+        &__header {
+            padding-top: 3em;
+            display: flex;
+            align-items: flex-start;
+            height: 20em;
+
+            &--logo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 0;
+
+                &--img {
+                    height: 3.25em;
+                    width: 3.25em;
+                    margin-right: 1em;
+                }
+
+                &--text {
+                    font-family: "Marcellus";
+                    color: #5e2c91;
+                    font-size: 1.5em;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+            }
+
+            &--links {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                margin-right: 0;
+                cursor: pointer;
+                transition: .2s ease-in-out;
+
+                &--el {
+                    margin-top: 12px;
+                    margin-left: 1.5em;
+                    transition: .2s;
+
+                    a {
+                        font-weight: 500;
+                        font-size: 1.25em;
+                        color: #fff;
+                        text-decoration: none;
+                        text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                &--hamburguer {
+                    display: none;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    border-radius: 50%;
+                    height: 3.25em;
+                    width: 3.25em;
+                }
+
+                &--hamburguer::before,
+                &--hamburguer::after,
+                &--hamburguer div {
+                    content: '';
+                    display: block;
+                    width: 25px;
+                    border-radius: 10px;
+                    height: 3px;
+                    margin: 2.5px;
+                    background: white;
+                    transition: .2s ease-in-out;
+                }
+
+                &:hover &--hamburguer {
+                    background: rgba(255,255,255,0.2);
+                }
+
+                &:hover &--hamburguer::before {
+                    transform: translateY(8px) rotate(135deg);
+                }
+
+                &:hover &--hamburguer div {
+                    transform: scale(0);
+                }
+
+                &:hover &--hamburguer::after {
+                    transform: translateY(-8px) rotate(-135deg);
+                }
+            }
+        }
+
+        &__content {
+
+            &--title1 {
+                font-size: 4em;
+                font-family: "Marcellus";
+                text-transform: uppercase;
+                color: #5e2c91;
+                text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+            }
+
+            &--title2 {
+                font-size: 6em;
+                font-family: "Marcellus";
+                text-transform: uppercase;
+                color: #5e2c91;
+                text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+            }
+
+            &--desc {
+                font-size: 2em;
+                width: 20em;
+                margin-left: 0;
+                color: #fff;
+                font-weight: 700;
+                text-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+            }
+        }
+
+        &__buttons {
+            margin-top: 2em;
+
+            &--login {
+                background: rgba(94,44,145,0.8);
+                border: none;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+                border-radius: 6px;
+                margin-left: 0;
+                width: 18em;
+                height: 3.5em;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+
+                .btn-wrapper {
+                    width: 7em;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                .material-icons {
+                    color: #fff;
+                }
+
+                &--text {
+                    font-size: 1.25em;
+                    color: #fff;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    background: rgba(94,44,145, 0.7);
+                }
+
+            }
+
+            &--explore {
+                background: none;
+                border: 1px solid #fff;
+                box-shadow: 0 0 1px 1px rgba(255,255,255,0.3);
+                border-radius: 6px;
+                margin-left: 0;
+                width: 18em;
+                height: 3.5em;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+                margin-left: 3.5em;
+
+                .btn-wrapper {
+                    width: 7em;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                .material-icons {
+                    color: #fff;
+                }
+
+                &--text {
+                    font-size: 1.25em;
+                    color: #fff;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+
+    &-footer-landing {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        height: 7em;
+
+        &__social {
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+
+.footer-logo {
+    width: 2em;
+    height: 2em;
+    margin: 0.5em 1em;
+    transition: 0.2s;
+
+    &:hover {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
+    }
+}
+
+.underlay-index {
+    top: -20%;
+    left: -20%;
+    position: absolute;
+    filter: opacity(30%) brightness(120%) blur(10px);
+    transform: scale(1.2);
+    z-index: -1;
+}
+
+@media (max-width: 700px) {
+
+    .index-main__header {
+        height: 35%;
+    }
+
+    .index-main__header--links {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: -1.5em;
+
+        &:hover &--el {
+            transform: translateX(-22px);
+        }
+
+        &--hamburguer {
+            display: flex;
+        }
+
+        &--el {
+            margin: auto;
+            transform: translateX(200px);
+            height: 2em;
+            width: 6em;
+            text-align: right;
+        }
+    }
+
+    .index-main__content {
+
+        &--title1 {
+            font-size: 1.5em;
+        }
+
+        &--title2 {
+            font-size: 3em;
+        }
+
+        &--desc {
+            width: 100%;
+            font-size: 1.5em;
+        }
+    }
+
+    .index-main__buttons {
+
+        &--explore {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        &--login {
+            margin-bottom: 1.25em;
+            width: 100%;
+        }
+    }
+
+}

@@ -1,0 +1,184 @@
+/* Lesson Component */
+
+.lesson {
+    margin: 1em;
+    height: 15em;
+    width: 40em;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+    &-main {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+
+
+        &__picture {
+
+            .lesson-pic {
+                object-fit: cover;
+                width: 12em;
+                height: 12em;
+                border-radius: 50%;
+                border: 1px solid #dbdbdb;
+            }
+        }
+
+        &__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 12em;
+            width: 10em;
+
+            .lesson {
+
+                &-title {
+                    width: 10em;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    margin-left: 0;
+                    font-size: 1.15em;
+                    font-weight: 400;
+                }
+
+                &-desc {
+                    overflow: hidden;
+                    position: relative;
+                    height: 8em;
+                    width: 100%;
+                    color: #68656b;
+                    font-size: 0.875em;
+                    text-align: left;
+                }
+
+                &-desc:after {
+                    content: "";
+                    text-align: right;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 70%;
+                    height: 1.2em;
+                    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+                }
+
+                &-autor {
+                    text-transform: capitalize;
+                    font-size: 0.775em;
+                    font-weight: 700;
+                    margin-left: 0;
+                    color: #5e2c91;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__buttons {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+
+            &--hidden {
+                background: none;
+                border: none;
+            }
+
+            &--wrapper {
+                margin-bottom: 1.7em;
+
+                .lesson-button {
+                    background: none;
+                    border: 1px solid #dbdbdb;
+                    height: 2.25em;
+                    width: 6em;
+                    border-radius: 4px;
+                    font-weight: 500;
+                    color: #2c2c2c;
+                    cursor: pointer;
+                }
+            }
+
+            .share-btn {
+                position: absolute;
+                right: 0.5em;
+                top: 0.5em;
+                font-size: 1.5em;
+                cursor: default;
+                color: #2c2c2c;
+                opacity: 0.3;
+            }
+
+            .like-btn {
+                position: absolute;
+                right: 2em;
+                top: 0.5em;
+                font-size: 1.5em;
+                cursor: pointer;
+                color: #2c2c2c;
+                text-decoration: none;
+            }
+
+            .btn-link {
+                text-decoration: none;
+                color: #2c2c2c;
+
+                &:active {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .lesson {
+        width: 98%;
+    }
+}
+
+@media (max-width: 550px) {
+    .lesson {
+        height: 100%;
+
+        &-main {
+            flex-direction: column;
+
+            &__picture {
+                .lesson-pic {
+                    width: 15em;
+                    height: 15em;
+                    margin: 1em;
+                }
+            }
+
+            &__title {
+                width: 80%;
+                .lesson-title {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .lesson-desc {
+                    white-space: pre-wrap;
+                    height: 8.4em;
+                }
+
+                .lesson-autor {
+                    width: 100%;
+                    margin-bottom: 1em;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.like-disabled {
+    opacity: 50%;
+    pointer-events: none;
+}

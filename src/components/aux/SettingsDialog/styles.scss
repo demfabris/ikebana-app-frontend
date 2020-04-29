@@ -1,0 +1,58 @@
+/* Settings Dialog */
+
+.settings {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    background: rgba(0,0,0,0.7);
+
+    &-main {
+        width: 23em;
+        padding: 2em;
+        border-radius: 12px;
+
+        &__el {
+            display: flex;
+            align-items: center;
+            height: 48px;
+            border-bottom: 1px solid #dbdbdb;
+            background: #fff;
+
+            &:hover {
+                background: rgba(240,240,240,1);
+            }
+
+            &:active {
+                background: rgba(230,230,230,1);
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: #2c2c2c;
+                width: 100%;
+                text-align: center;
+                height: 100%;
+            }
+
+            &:first-child {
+                border-radius: 12px 12px 0 0;
+            }
+
+            &:last-child {
+                border-bottom: none;
+                border-radius: 0px 0px 12px 12px;
+            }
+
+            &--text {
+                font-size: 14px;
+            }
+        }
+    }
+}

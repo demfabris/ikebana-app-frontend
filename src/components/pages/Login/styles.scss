@@ -1,0 +1,349 @@
+/* Login */
+
+.login {
+    min-height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    .wrapper {
+        flex-grow: 1;
+    }
+
+
+    &-btn {
+        background: #5e2c91;
+        border: none;
+        color: #fff;
+        width: 19.5em;
+        font-weight: 500;
+        font-size: 0.875em;
+        border-radius: 6px;
+        height: 2.5em;
+        cursor: pointer;
+        margin-top: 0.15em;
+        transition: .2s;
+
+        &:hover {
+            background: rgba(94, 44, 145, 0.9);
+        }
+    }
+
+    &-input {
+        height: 3em;
+        border: 1px solid #dbdbdb;
+        width: 20em;
+        font-size: 0.85em;
+        padding: 1em;
+        border-radius: 4px;
+        background: #f8f9fc;
+        transition: 0.1s;
+
+        &::placeholder {
+            color: #969696;
+            font-size: 0.925em;
+            font-weight: 400;
+            transition: 0.1s;
+        }
+
+        &:focus {
+            padding-top: 20px;
+            border: 1px solid rgba(94, 44, 145, 0.5);
+            &::placeholder {
+                transform: translateY(-18px);
+                font-size: 0.65em;
+            }
+        }
+    }
+
+    &-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 31em;
+        width: 21.5em;
+        background: #fff;
+        margin-top: 10vh;
+        border: 1px solid #dbdbdb;
+        border-radius: 1px;
+
+        .ike-logo {
+            margin-top: 1em;
+            width: 11em;
+            margin-bottom: -1em;
+        }
+
+        &__inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 6em;
+        }
+
+        &__spacer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 3em;
+            width: 70%;
+            justify-content: space-around;
+
+            &--text {
+                color: #969696;
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                font-weight: 500;
+                font-size: 0.825em;
+            }
+        }
+
+        &__external {
+            .login-google {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                border: none;
+                border-radius: 4px;
+                align-items: center;
+                width: 10em;
+                height: 2.5em;
+                background: #2c2c2c;
+                cursor: pointer;
+
+                &--text {
+                    font-size: 0.975em;
+                    font-weight: 500;
+                    color: #fff;
+                }
+
+                .google-logo {
+                    width: 1.5em;
+                }
+            }
+        }
+
+        &__forgot {
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+
+                p {
+                    color: #969696;
+                    font-size: 0.875em;
+                }
+
+            .forgot-btn {
+                background: none;
+                border: none;
+                font-size: 0.875em;
+                cursor: pointer;
+
+                a {
+                    color: #969696;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 21.5em;
+        min-height: 4.5em;
+        background: #fff;
+        border-radius: 4px;
+        margin-top: 0.5em;
+        border: 1px solid #dbdbdb;
+
+        &--text {
+            font-size: 0.95em;
+            font-weight: 300;
+            color: #2c2c2c;
+
+            .register-btn {
+                margin-left: 0.5em;
+                background: none;
+                border: none;
+                font-size: 0.925em;
+                color: #5e2c91;
+                font-weight: 500;
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            .register-btn:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .get-info {
+        text-align: center;
+        font-size: 0.925em;
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    &-get-btn { 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        opacity: 0.2;
+        filter: grayscale(100%);
+
+        .playstore-btn {
+            background: none;
+            border: 0;
+
+            img {
+                width: 12.88em;
+            }
+        }
+
+        .appstore-btn {
+            background: none;
+            border: 0;
+
+            img {
+                width: 12em;
+            }
+        }
+    }
+}
+
+.spacer-h {
+    width: 7em;
+    height: 1px;
+    background: #dbdbdb;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    .validation-overlay {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: -2em;
+        top: 0;
+        bottom: 0;
+
+        .material-icons {
+            color: red;
+        }
+    }
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Register */
+
+.register-main {
+    height: 40em;
+    margin-top: 2.5em;
+
+    &-info {
+        width: 17em;
+
+        .register-desc {
+            text-align: center;
+            font-size: 1.15em;
+            font-weight: 500;
+            color: #969696;
+        }
+
+    }
+}
+
+.register-inputs {
+    height: 12em;
+}
+
+/* Forgot */
+
+.forgot {
+    height: 27em;
+}
+
+.forgot-inputs {
+    height: 4em;
+}
+
+/* Logout */
+.logout-main {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+
+    &__text {
+        font-weight: 500;
+        font-size: 1em;
+    }
+}
+
+/* Confirm email */
+
+.confirm-email {
+    position: fixed;
+    width: 32em;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+
+    &--text {
+        font-weight: 400;
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .redirect div {
+        background: black;
+    }
+}
+
+@media (max-width: 450px) {
+    .login {
+        background: #fff;
+
+        .wrapper {
+            width: 100%;
+        }
+
+        &-main {
+            width: 100%;
+            border: none;
+            margin-top: 2px;
+        }
+    }
+
+    .login-bottom {
+        width: 100%;
+        border: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .login-main {
+        width: 100%;
+    }
+
+    .login-bottom {
+        width: 100%;
+    }
+}

@@ -1,0 +1,209 @@
+
+/* Checkout Dialog */
+
+.checkout-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--close {
+        position: absolute;
+        top: 4vh;
+        right: 4vh;
+        border: none;
+        background: 0;
+        color: #fff;
+        cursor: pointer;
+
+        i {
+            font-size: 3em;
+        }
+    }
+
+    .v-spacer {
+        margin-left: 1em;
+        height: 21em;
+        width: 1px;
+        background: #dbdbdb;
+    }
+
+    .dialog-btn {
+        background: none;
+        margin-top: 1.5em;
+        margin-right: 1.5em;
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        height: 2.5em;
+        width: 6em;
+        font-weight: 500;
+        color: #2c2c2c;
+        font-size: 0.875em;
+        cursor: pointer;
+    }
+
+    &__content {
+        border-radius: 3px;
+        background: #fafafa;
+        height: 65vh;
+        width: 90vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, .175);
+
+        .wrapper {
+            height: 74.5%;
+            display: flex;
+            flex-direction: row;
+            box-shadow: none;
+
+            &-left {
+                height: 100%;
+                width: 60%;
+
+                &__about {
+                    padding: 1.5em;
+                    height: 100%;
+
+                    &--header {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        height: 6em;
+
+                        .checkout-about {
+                            margin-left: 0;
+                            font-size: 1.25em;
+                            font-weight: 300;
+                        }
+
+                        .checkout-text {
+                            font-weight: 500;
+                            font-size: 0.8em;
+                            color: #2c2c2c;
+                        }
+                    }
+
+                    &--donation {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        height: 6em;
+
+                        .donation-title {
+                            font-size: 1.25em;
+                            font-weight: 300;
+                            margin-left: 0;
+                        }
+
+                        .donation-text {
+                            font-size: 0.8em;
+                            font-weight: 500;
+                            color: #2c2c2c;
+                        }
+                    }
+
+                    &--msg {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+
+                        .msg-wrapper {
+                            margin-left: 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            height: 14em;
+                            width: 100%;
+                        }
+
+                        .msg-title {
+                            font-weight: 300;
+                            font-size: 1.25em;
+                            margin-left: 0;
+                        }
+
+                        #msg-to-autor {
+                            width: 100%;
+                            height: 100%;
+                            padding: 0.5em;
+                            margin: 1em 0 0 0;
+                            resize: none;
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                width: 35%;
+                height: 100%;
+                padding: 1.5em;
+
+                &__orders {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    position: relative;
+
+                    .shadow-overlay {
+                        position: absolute;
+                        top: 0;
+                        right: 2em;
+                        left: 0;
+                        bottom: 0;
+                        z-index: 1;
+                        pointer-events: none;
+                        box-shadow: inset 0 -4em 1em -2em #f8f9fc;
+                    }
+
+                    .orders-title {
+                        font-weight: 300;
+                        font-size: 1.25em;
+                    }
+
+                    &--list {
+                        display: flex;
+                        flex-direction: column;
+                        overflow-y: scroll;
+                        height: 25em;
+                        width: 100%;
+                        padding-bottom: 2.5em;
+                    }
+                }
+            }
+        }
+
+        &--header {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            min-height: 5em;
+            width: 100%;
+            border-bottom: 1px solid #dbdbdb;
+
+            .checkout-title {
+                margin-left: 1em;
+                font-size: 1.5em;
+                font-weight: 300;
+                color: #2c2c2c;
+            }
+        }       
+
+        .footer {
+            display: flex;
+            border-top: 1px solid #dbdbdb;
+            width: 100%;
+            min-height: 5em;
+            background: #fff;
+
+        }
+    }
+}

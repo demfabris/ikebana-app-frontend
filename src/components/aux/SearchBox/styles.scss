@@ -1,0 +1,37 @@
+/*  Search Box */
+
+.search-container {
+    position: absolute;
+    background: #fff;
+    top: 2em;
+    width: 15em;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0.15rem 0.5rem 0 rgba(58, 59, 69, 0.15);
+
+    &__results {
+        width: 100%;
+        height: 100%;
+        padding-left: 0.5em;
+        padding-top: 0.5em;
+
+        .placeholder-text {
+            color: #65676b;
+            font-weight: 500;
+        }
+
+        &--el {
+            width: 100%;
+            height: 2em;
+            list-style-type: none;
+
+            &--text {
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 1em;
+                color: #65676b;
+                font-weight: 500;
+            }
+        }
+    }
+}
