@@ -55,7 +55,7 @@ export default function CheckoutDialog({handler}) {
                     <div className="checkout-dialog-landscape__content--info">
                         <div className="info-container">
                             <h2 className="info-container__title">Sobre</h2>
-                            <p className="info-container__text">Você está realizando uma solicitação a um membro da platadiva. Esta solicitação tem caráter caritativo e não visa lucros. O solicitado poderá <b>recusar</b> o pedido caso não possa atendê-lo.</p>
+                            <p className="info-container__text">Você está realizando uma solicitação a um membro da plataforma. Esta solicitação tem caráter solidário e não visa lucros. O solicitado poderá <b>recusar</b> o pedido caso não possa atendê-lo.</p>
                         </div>
                         <div className="info-container">
                             <h2 className="info-container__title">Doações</h2>
@@ -108,7 +108,7 @@ export default function CheckoutDialog({handler}) {
                     <div className="checkout-dialog-portrait__content--info">
                         <div className="info-container">
                             <h2 className="info-container__title">Sobre</h2>
-                            <p className="info-container__text">Você está realizando uma solicitação a um membro da platadiva. Esta solicitação tem caráter caritativo e não visa lucros. O solicitado poderá <b>recusar</b> o pedido caso não possa atendê-lo.</p>
+                            <p className="info-container__text">Você está realizando uma solicitação a um membro da plataforma. Esta solicitação tem caráter caritativo e não visa lucros. O solicitado poderá <b>recusar</b> o pedido caso não possa atendê-lo.</p>
                         </div>
                         <div className="info-container">
                             <h2 className="info-container__title">Doações</h2>
