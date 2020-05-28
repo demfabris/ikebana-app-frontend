@@ -12,7 +12,6 @@ import Dashboard from './components/Dashboard/Dashboard';
 import ForgotPassword from './components/pages/Login/ForgotPassword';
 import ResetPassword from './components/pages/Login/ResetPassword';
 import ConfirmEmail from './components/pages/Login/ConfirmEmail';
-import Logout from './components/pages/Login/Logout';
 import Motivation from './components/pages/Motivation/Motivation';
 import Oauth from './components/pages/Login/Oauth';
 
@@ -45,7 +44,7 @@ function Routes() {
                 <Route path="/oauth">
                     <Oauth />
                 </Route>
-                <Route path={["/home", "/explore", "/lessons", "/lesson", "/account", "/logout", "/motivation"]}>
+                <Route path={["/home", "/explore", "/lessons", "/lesson", "/account", "/logout", "/motivation", "/admin"]}>
                     <Dashboard />
                 </Route>
             </Switch>

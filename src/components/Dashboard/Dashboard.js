@@ -2,8 +2,6 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Route,
-    Switch,
-    useHistory
 } from 'react-router-dom';
 
 import Sidebar from '../Sidebar/Sidebar';
@@ -16,7 +14,7 @@ import Home from '../pages/Home/Home';
 import Account from '../pages/Account/Account';
 import Lessons from '../pages/Lessons/Lessons';
 import SingleLesson from '../pages/SingleLesson/SingleLesson';
-import Motivation from '../pages/Motivation/Motivation';
+import Admin from '../pages/Admin/Admin';
 
 import './styles.scss';
 
@@ -41,6 +39,9 @@ function Dashboard() {
                 </Route>
                 <Route path="/lessons">
                     <Lessons />
+                </Route>
+                <Route path="/admin">
+                    <Admin />
                 </Route>
                 <Route path="/lesson/:lesson_hash">
                     <SingleLesson />

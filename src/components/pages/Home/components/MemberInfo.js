@@ -1,10 +1,39 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import api from 'services/api';
 
 import '../styles.scss';
 
 export default function MemberInfo(data) {
-    const [tab,setTab] = useState(1);
+    const [tab, setTab] = useState(1);
+    const [loading, setLoading] = useState(false);
+    const [adminInfo, setAdminInfo] = useState();
+
+    const authKey = useSelector(state => state.auth.keys)
+
+    const hitApi = async (key=authKey) => {
+        setLoading(true)
+        try{
+            const response = await api({
+                method: 'get',
+                url: '/admin_info',
+                headers: {
+                    'Authorization': `Bearer ${key[0].key}`
+                },
+            })
+            setAdminInfo(response.data)
+            console.log(response.data)
+        } catch(e) {
+            console.log(e)
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    useEffect(() => {
+        data.id === 1 && hitApi()
+    },[])
 
     const partnerOn = Date.parse(data.partnerWhen)
     const turnedPartner = new Date(partnerOn)
@@ -27,6 +56,14 @@ export default function MemberInfo(data) {
                         Estatísticas
                     </p>
                 </li>
+                {
+                    data.id === 1 &&
+                        <li onClick={() => setTab(4)} className={`profile-about__tabs--el ${tab === 4 ? 'about-active' : ''}`}>
+                            <p className="profile-about__tabs--el--text">
+                                Administrador
+                            </p>
+                        </li>
+                }
             </ul>
             {
                 tab === 1 &&
@@ -69,7 +106,7 @@ export default function MemberInfo(data) {
                         <li className="profile-about__display--el">
                             <i className="material-icons">group</i>
                             <p className="profile-about__display--el--text">
-                                <p style={{fontSize: "0.9em", fontWeight: "500"}}>Membro desde: </p>
+                                <b style={{fontSize: "0.9em", fontWeight: "500"}}>Membro desde: </b>
                                 {' ' + turnedPartner.getDate()
                                 }/{1 + turnedPartner.getMonth()
                                 }/{turnedPartner.getFullYear()}
@@ -93,6 +130,29 @@ export default function MemberInfo(data) {
                             </p>
                         </li>
                     </ul>
+            }
+            {
+                tab === 4 &&
+                        <ul className="profile-about__display">
+                            <li className="profile-about__display--el">
+                                <i className="material-icons">perm_contact_calendar</i>
+                                <p className="profile-about__display--el--text">
+                                    {adminInfo.users} Usuários cadastrados
+                                </p>
+                            </li>
+                            <li className="profile-about__display--el">
+                                <i className="material-icons">photo_album</i>
+                                <p className="profile-about__display--el--text">
+                                    {adminInfo.projects} Projetos criados
+                                </p>
+                            </li>
+                            <li className="profile-about__display--el">
+                                <i className="material-icons">supervisor_account</i>
+                                <Link to="/admin" className="profile-about__display--el--text">
+                                    Acessar área de administrador
+                                </Link>
+                            </li>
+                        </ul>
             }
         </div>
     );
