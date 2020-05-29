@@ -21,7 +21,8 @@ const Pages = {
     'account' : 'Conta',
     'home' : 'Perfil',
     'lessons' : 'Aulas',
-    'lesson' : 'Aula'
+    'lesson' : 'Aula',
+    'admin' : "Admin"
 };
 const CurrentUrl = () => {
     let active = useLocation();

@@ -56,9 +56,14 @@ export default function MemberInfo(data) {
                         Estatísticas
                     </p>
                 </li>
+                <li onClick={() => setTab(4)} className={`profile-about__tabs--el ${tab === 4 ? 'about-active' : ''}`}>
+                    <p className="profile-about__tabs--el--text">
+                        Suporte
+                    </p>
+                </li>
                 {
                     data.id === 1 &&
-                        <li onClick={() => setTab(4)} className={`profile-about__tabs--el ${tab === 4 ? 'about-active' : ''}`}>
+                        <li onClick={() => setTab(5)} className={`profile-about__tabs--el ${tab === 5 ? 'about-active' : ''}`}>
                             <p className="profile-about__tabs--el--text">
                                 Administrador
                             </p>
@@ -133,6 +138,18 @@ export default function MemberInfo(data) {
             }
             {
                 tab === 4 &&
+                    <ul className="profile-about__display">
+                        <li className="profile-about__display--el">
+                            <i className="material-icons">school</i>
+                            <a href="http://novo.sanguetsu.com.br/materialdeapoio" 
+                              target="_blank" className="profile-about__display--el--text tab-link">
+                                Material de apoio
+                            </a>
+                        </li>
+                    </ul>
+            }
+            {
+                tab === 5 &&
                         <ul className="profile-about__display">
                             <li className="profile-about__display--el">
                                 <i className="material-icons">perm_contact_calendar</i>
@@ -148,7 +165,7 @@ export default function MemberInfo(data) {
                             </li>
                             <li className="profile-about__display--el">
                                 <i className="material-icons">supervisor_account</i>
-                                <Link to="/admin" className="profile-about__display--el--text">
+                                <Link to="/admin" className="profile-about__display--el--text tab-link">
                                     Acessar área de administrador
                                 </Link>
                             </li>

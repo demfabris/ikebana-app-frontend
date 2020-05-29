@@ -70,10 +70,15 @@ export default function Admin() {
         }
     })
 
+    window.onload = () => {
+        window.dispatchEvent(new Event("resize"))
+    }
+
     useEffect(() => {
         window.onresize = () => {
             if (window.innerWidth < 860) {
                 document.getElementById("main-content").style.overflowX="scroll";
+                document.getElementsByTagName("body")[0].style.overflowX="hidden";
             } else {
                 document.getElementById("main-content").style.overflowX="auto";
             }

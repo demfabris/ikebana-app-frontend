@@ -355,6 +355,16 @@
     height: 8em !important;
 }
 
+.tab-link {
+    font-weight: 700;
+    color: rgba(94, 44, 145, 0.9);
+    text-decoration: none;
+
+    &:active {
+        color: rgba(94, 44, 145, 0.6);
+    }
+}
+
 @media (max-width: 850px) {
     .profile {
         width: 99%;
