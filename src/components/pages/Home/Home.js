@@ -17,7 +17,6 @@ import MessageWrapper from '../../list_elements/Message/MessageWrapper';
 import NewWrapper from '../../list_elements/New/NewWrapper';
 import Modal from '../../aux/Modal';
 import SettingsDialog from '../../aux/SettingsDialog/SettingsDialog';
-import ErrorDialog from '../../aux/ErrorDialog/ErrorDialog';
 
 import MemberInfo from './components/MemberInfo';
 import NotAMemberInfo from './components/NotAMemberInfo';
@@ -25,7 +24,6 @@ import NotAMemberTab from './components/NotAMemberTab';
 
 export default function Home() {
     const dispatch = useDispatch();
-    const [error, setError] = useState(false);
     const [loading, setLoading] = useState(true);
     const active = useSelector(state => state.links.current.url)
 

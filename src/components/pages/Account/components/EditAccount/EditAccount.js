@@ -186,10 +186,9 @@ export default function EditAccount() {
                         <WarningDialog value={warning} handler={() => {
                             setWarning(false)
                             window.location.reload()
-                        }} accept={() => {
+                        }} accept={async () => {
                             clearNotifications()
                             setWarning(false)
-                            window.location.reload()
                         }}/>
                     </Modal>
             }

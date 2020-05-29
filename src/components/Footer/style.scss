@@ -51,7 +51,7 @@
         aling-items: center;
 
         &__content {
-            width: 100%;
+            width: 850px;
 
             &--list {
                 justify-content: flex-end;
@@ -62,5 +62,11 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 850px) {
+    .footer-main__content {
+        width: 100%;
     }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeUrl } from 'store/ducks/links';
 import { loadNotif } from 'store/ducks/notifications';
@@ -30,7 +30,6 @@ const CurrentUrl = () => {
 
 export default function Header() {
     const dispatch = useDispatch();
-    const history = useHistory();
 
     //shrink on scroll
     useEffect(() => {
@@ -246,7 +245,7 @@ export default function Header() {
                                             <Clipper handler={() => setDialog(false)} />
                                     }
                                 </div>
-                                <div className={`button-wrapper ${authKey.length === 0 ? 'disabled' : ''}`}>
+                                <div className={`button-wrapper ${authKey.length === 0 || data.isPartner === false ? 'disabled' : ''}`}>
                                     <div className={`counter ${ authKey.length === 0 ? 'counter-disabled' : '' } ${ notifCount === 0 ? 'counter-hidden' : '' }`}>
                                         <p className="notif-counter">{notifCount}</p></div>
                                     <Link onClick={() => {authKey.length !== 0 &&

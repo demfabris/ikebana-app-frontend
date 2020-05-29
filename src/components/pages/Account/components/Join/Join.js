@@ -21,6 +21,10 @@ export default function Join() {
     const onSubmit = async ({ city, tel, personal_address, location, work_address, accept}) => {
         setLoading(true)
         try {
+            if (data.req_partner) {
+                setInfo("Você já solicitou se tornar membro!")
+                throw new Error;
+            }
             if (accept) {
                 const response = await api({
                     method: 'post',
@@ -37,7 +41,7 @@ export default function Join() {
                     }
                 })
                 response.data.response && setInfo('Dados Atualizados')
-                response.data.success && setInfo('Você virou membro')
+                response.data.success && setInfo('Cadastro completo, aguarde aprovação do administrador')
             }
         } catch(e) {
             console.log(e)
